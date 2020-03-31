@@ -36,7 +36,7 @@
         (cerror "Ignore and continue"
                 "Requirement ~S does not exist. Ensure if it's installed and check your PATH." command))))
 
-(defun pandoc (input &key (from "markdown") (to "html"))
+(defun pandoc (input &key (from "markdown-raw_html") (to "html"))
   (check-type input (or pathname stream))
   (check-if-command-installed *timeout-command*)
   (check-if-command-installed *pandoc-path*)
